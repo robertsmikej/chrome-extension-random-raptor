@@ -1,0 +1,66 @@
+<style>
+.raptorDiv {
+	width: 501px;
+	height: 343px;
+	position: fixed;
+	bottom: 0;
+	left: -600px;
+	z-index: 1000;
+	background: transparent;
+	animation-name: raptorRunMove;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+	display: none;
+    transition: opacity .4s;
+}
+@keyframes raptorRunMove {
+0 		{left: -20%;}
+100%   	{left: calc(100% + 600px);}
+}
+.raptorNoLegs {
+	width: 500px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.lpRaptorLegOuterImg {
+	width: 60px;
+	height: 200px;
+	position: absolute;
+	top: 140px;
+	left: 290px;
+	z-index: 2;
+	animation: outerLeg 1.2s infinite linear;
+	transform-origin: 40% 10%;
+}
+@keyframes outerLeg {
+0% { transform: rotate(-60deg);}
+50% { transform: rotate(70deg);}
+100% { transform: rotate(-60deg);}
+}
+.lpRaptorLegInnerImg {
+	width: 220px;
+	height: 60px;
+	position: absolute;
+	top: 137px;
+	left: 333px;
+	z-index: 0;
+	animation: innerLeg 1.2s infinite linear;
+	transform-origin: 10% 10%;
+	animation-delay: .6s;
+}
+@keyframes innerLeg {
+0% { transform: rotate(10deg);}
+50% { transform: rotate(130deg);}
+100% { transform: rotate(10deg);}
+}
+</style>
+<div class="raptorDiv">
+	<img class="raptorNoLegs" src="../imgs/raptor/raptorNoLegs.png">
+	<img class="lpRaptorLegInnerImg" src="../imgs/raptor/raptorLeg.png">
+	<img class="lpRaptorLegOuterImg" src="../imgs/raptor/raptorLegRight.png">
+</div>

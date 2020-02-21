@@ -1,0 +1,72 @@
+{
+    "manifest_version": 2,
+    "name": "Random Raptor",
+    "author": "Mike Roberts",
+    "description": "Dinosaurs Could Attack At Any Time! WHAAAAT?!",
+    "version": "2.0.01",
+    "background": {
+    "scripts": [
+      "jquery.min.js"
+    ],
+    "persistent": false
+    },
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*", "file://*"],
+        "js":      ["jquery.min.js", "randomRaptor.js"],
+        "run_at": "document_end",
+        "exclude_globs": [
+            "*cms.bodybuilding.com*",
+            "*publishing-store*",
+            "*body.local*",
+            "*body.stage*",
+            "*bcc*"
+        ]
+    }],
+    "browser_action": {
+        "default_icon": "imgs/headers__and__ext__imgs/dinoHead128-1.png"
+    },
+    "icons": {
+        "128":"imgs/headers__and__ext__imgs/dinoHead128-1.png"
+    },
+    "permissions": [
+        "http://*/",
+        "https://*/",
+        "activeTab",
+        "tabs",
+        "https://ajax.googleapis.com/",
+        "contextMenus",
+        "storage",
+        "notifications",
+        "cookies",
+        "alarms"
+    ],
+    "web_accessible_resources": [
+        "randomRaptor.js",
+        
+        "/dinos/raptorRun.html",
+        "/dinos/spittingDino.html",
+        "/dinos/raptorTree1.html",
+        "/dinos/raptorScare1.html",
+        "/dinos/walkingtriceratops.html",
+        
+        "imgs/raptor/raptorLeg.png",
+        "imgs/raptor/raptorLegRight.png",
+        "imgs/raptor/raptorFullWithRightLeg.png",
+        "imgs/raptor/raptorFullWithRightLeg.png",
+        "imgs/raptor/raptorNoLegs.png", 
+        "imgs/props/treePeek.png",
+        "imgs/raptor/raptorPeerOut.png",
+        "imgs/raptor/scaryRaptor1.png",
+        "imgs/triceratops/tricHead.png",
+        "imgs/triceratops/tricNoLegsNoHeadNoTail.png",
+        "imgs/triceratops/tricFrontFullLeg.png",
+        "imgs/triceratops/tricFrontNotFullLeg.png",
+        "imgs/triceratops/tricBackFullLeg.png",
+        "imgs/triceratops/tricBackNotFullLeg.png",
+        "imgs/triceratops/tricTail.png",
+        "imgs/spittingBastard/diloGif.gif",
+        
+        "sounds/dinoScream.mp3",
+        "sounds/clicking.mp3"
+    ]
+}

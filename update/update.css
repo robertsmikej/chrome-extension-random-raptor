@@ -1,0 +1,51 @@
+body, html {
+	background-color: #666666;
+}
+#updates {
+	width: 65%;
+	max-width: 900px;
+	min-width: 600px;
+	margin: 80px auto 0% auto;
+	display: block;
+	padding: 20px;
+	border: 3px solid #00aeef;
+	border-radius: 15px;
+	background: #FFF;
+}
+#updates h1{
+	font: 20px/22px Oswald;
+	margin: 0px 0 0 0;
+}
+#updates h2{
+	font: 24px Oswald;
+	margin: 5px 0 0 0;
+}
+#updates h3 {
+	font: 18px Oswald;
+	margin: 0 0 5px 0;
+	text-decoration: underline;
+}
+#updates p {
+	font: 18px Oswald;
+	font-weight: 300;
+	margin: 0;
+}
+#updatesOlder {
+	display: none;
+}
+#updates #clickForOldUpdates {
+	color: #0aaeff;
+	text-decoration: underline;
+	font-weight: 500;
+	margin-top: 20px;
+	text-align: right;
+}
+#updates .contactInfo {
+	margin-top: 150px;
+	text-align: right;
+}
+#updates .standOut {
+	font-size: 20px;
+	font-weight: 400;
+	color: red;
+}

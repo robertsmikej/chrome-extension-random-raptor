@@ -1,0 +1,146 @@
+<style>
+.raptorDiv {
+	width: 752px;
+	height: 300px;
+	position: fixed;
+	bottom: 0;
+	right: -770px;
+	z-index: 1000;
+	background: transparent;
+	display: none;
+	animation: triWholeMove;
+	animation-duration: 14s;
+    animation-timing-function: linear;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+@keyframes triWholeMove {
+	0% { right: -770px;}
+	100% { right: 130%;}
+}
+.raptorDiv img {
+	position: absolute;
+}
+.raptorDiv .welBody {
+	top: -40px;
+	left: 160px;
+	z-index: 1;
+	width: 300px;
+}
+.raptorDiv .welHead {
+	width: 200px;
+	top: 0px;
+	z-index: 2;
+	animation: head;
+	animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+@keyframes head {
+	0% { transform: rotate(-10deg);}
+	50% { transform: rotate(20deg);}
+	100% { transform: rotate(-10deg);}
+}
+.raptorDiv .welFrontLegFull {
+	width: 130px;
+	top: 130px;
+	left: 170px;
+	z-index: 1;
+	animation: frontlegFull;
+	animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: .0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+	transform-origin: 60% 10%;
+}
+@keyframes frontlegFull {
+	0% { transform: rotate(-20deg);}
+	50% { transform: rotate(20deg);}
+	100% { transform: rotate(-20deg);}
+}
+.raptorDiv .welFrontLegNotFull {
+	width: 70px;
+	top: 175px;
+	left: 250px;
+	z-index: 0;
+	animation: frontlegNotFull;
+	animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: .7s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+	transform-origin: 60% 10%;
+}
+@keyframes frontlegNotFull {
+	0% { transform: rotate(-10deg);}
+	50% { transform: rotate(30deg);}
+	100% { transform: rotate(-10deg);}
+}
+.raptorDiv .welBackLegFull {
+	width: 240px;
+	top: 30px;
+	left: 330px;
+	z-index: 1;
+	animation: backLegFull;
+	animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: .1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+	transform-origin: 20% 20%;
+}
+@keyframes backLegFull {
+	0% { transform: rotate(30deg);}
+	50% { transform: rotate(-10deg);}
+	100% { transform: rotate(30deg);}
+}
+.raptorDiv .welBackLegNotFull {
+	width: 120px;
+	top: 125px;
+	left: 350px;
+	z-index: 0;
+	animation: backLegNotFull;
+	animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+	transform-origin: 50% 0%;
+}
+@keyframes backLegNotFull {
+	0% { transform: rotate(0deg);}
+	50% { transform: rotate(-40deg);}
+	100% { transform: rotate(0deg);}
+}
+.raptorDiv .welTail {
+	width: 350px;
+	top: 35px;
+	left: 400px;
+	z-index: 0;
+	animation: tail;
+	animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: .1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+	transform-origin: 0% 50%;
+}
+@keyframes tail {
+	0% { transform: rotate(-10deg);}
+	50% { transform: rotate(20deg);}
+	100% { transform: rotate(-10deg);}
+}
+</style>
+<div class="raptorDiv">
+	<img src="tricHead.png" class="welHead">
+	<img src="tricNoLegsNoHeadNoTail.png" class="welBody">
+	<img src="tricFrontFullLeg.png" class="welFrontLegFull">
+	<img src="tricFrontNotFullLeg.png" class="welFrontLegNotFull">
+	<img src="tricBackFullLeg.png" class="welBackLegFull">
+	<img src="tricBackNotFullLeg.png" class="welBackLegNotFull">
+	<img src="tricTail.png" alt="" class="welTail">
+</div>
